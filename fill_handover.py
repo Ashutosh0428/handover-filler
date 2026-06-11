@@ -61,14 +61,33 @@ FIELD_MAP: list[Field] = [
     Field("unit",              "Unit",                     dr=0, dc=1),
     Field("project_name",      "Project Name",             dr=0, dc=1),
     Field("delivery_lead",     "Delivery Lead",            dr=0, dc=1),
+    # Field("date",            "Date",                     dr=0, dc=1),
     # --- incident counts (header on top, number below) ---
     Field("incidents_raised",   "No of Incidents Raised",   dr=1, dc=0),
     Field("incidents_resolved", "No of Incidents Resolved", dr=1, dc=0),
     Field("incidents_open",     "No of Incidents Open",     dr=1, dc=0),
-    # --- aging buckets: copy the EXACT header text from inspect output ---
-    # Field("aging_5_3",  "No of Incidents (5-3)",  dr=1, dc=0),
-    # Field("aging_3_1",  "No of Incidents (3-1)",  dr=1, dc=0),
-    # Field("aging_gt5",  "No of Incidents (>5)",   dr=1, dc=0),
+    #
+    # ---------------------------------------------------------------------
+    # Below are observed from the template screen but the EXACT label text /
+    # offset must be confirmed: run `inspect_template.py`, copy the real
+    # label strings here, then uncomment. dr=1,dc=0 = value below the header.
+    # ---------------------------------------------------------------------
+    # --- incident aging buckets ---
+    # Field("incidents_aging_5_3", "No of Incidents (5-3)", dr=1, dc=0),
+    # Field("incidents_aging_3_1", "No of Incidents (3-1)", dr=1, dc=0),
+    # Field("incidents_aging_gt5", "No of Incidents (>5)",  dr=1, dc=0),
+    # --- service request (SR) counts ---
+    # Field("srs_raised",   "No of SRs Raised",   dr=1, dc=0),
+    # Field("srs_resolved", "No of SRs Resolved", dr=1, dc=0),
+    # Field("srs_open",     "No of SRs Open",     dr=1, dc=0),
+    # --- SR aging buckets ---
+    # Field("srs_aging_5_3", "No of SRs (5-3)", dr=1, dc=0),
+    # Field("srs_aging_3_1", "No of SRs (3-1)", dr=1, dc=0),
+    # Field("srs_aging_gt5", "No of SRs (>5)",  dr=1, dc=0),
+    # --- comment sections (label on left, Comments/Details to the right) ---
+    # Field("major_incident_updates", "Major Incident Updates", dr=0, dc=1),
+    # Field("activities",              "Activities",             dr=0, dc=1),
+    # Field("pending_tasks",           "Pending Tasks / Follow-ups", dr=0, dc=1),
 ]
 
 

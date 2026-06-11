@@ -18,22 +18,34 @@ OUTPUT FORMAT — return ONLY this two-column table, nothing else
 | Unit |  |
 | Project Name |  |
 | Delivery Lead |  |
+| Date |  |
 | No of Incidents Raised |  |
 | No of Incidents Resolved |  |
 | No of Incidents Open |  |
-| No of Incidents (5-3) |  |
-| No of Incidents (3-1) |  |
-| No of Incidents (>5) |  |
-| Ongoing Updates |  |
-| Open Tasks / Follow-ups |  |
+| No of Incidents Aging (5-3) |  |
+| No of Incidents Aging (3-1) |  |
+| No of Incidents Aging (>5) |  |
+| No of SRs Raised |  |
+| No of SRs Resolved |  |
+| No of SRs Open |  |
+| No of SRs Aging (5-3) |  |
+| No of SRs Aging (3-1) |  |
+| No of SRs Aging (>5) |  |
+| Major Incident Updates |  |
+| Activities |  |
+| Pending Tasks / Follow-ups |  |
 
 RULES:
 - Use EXACTLY the field names above, in that order. Do not add or rename rows.
 - One value per row. If a value is NOT in the document, put "—". Never guess.
 - Counts must be plain integers (no words, no commas, no "incidents").
-- For "Ongoing Updates" and "Open Tasks": one short line; separate multiple
-  points with "; ".
+- For the text rows (Major Incident Updates / Activities / Pending Tasks): one
+  short line; separate multiple points with "; ".
 - Output ONLY the table. Nothing before the first "|" or after the last "|".
+
+NOTE: the aging bucket ranges (5-3 / 3-1 / >5) and section names above are read
+from the template screen — replace them with the EXACT wording from your real
+"Shift Handover Template.xlsx" so each value maps to the right cell.
 
 Here is the document:
 <<< paste the PDF text here, OR attach the PDF if the tool allows file upload >>>

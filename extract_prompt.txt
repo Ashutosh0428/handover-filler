@@ -8,14 +8,22 @@ Output EXACTLY these keys (numbers as integers, text as strings):
   "unit": "",
   "project_name": "",
   "delivery_lead": "",
+  "date": "",
   "incidents_raised": 0,
   "incidents_resolved": 0,
   "incidents_open": 0,
-  "aging_5_3": 0,
-  "aging_3_1": 0,
-  "aging_gt5": 0,
-  "ongoing_updates": "",
-  "open_tasks": ""
+  "incidents_aging_5_3": 0,
+  "incidents_aging_3_1": 0,
+  "incidents_aging_gt5": 0,
+  "srs_raised": 0,
+  "srs_resolved": 0,
+  "srs_open": 0,
+  "srs_aging_5_3": 0,
+  "srs_aging_3_1": 0,
+  "srs_aging_gt5": 0,
+  "major_incident_updates": "",
+  "activities": "",
+  "pending_tasks": ""
 }
 
 Rules:
