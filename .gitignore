@@ -10,3 +10,6 @@ data.json
 # real handover files (keep private)
 Infrastructure Handover*.pdf
 Shift Handover Template*.xlsx
+
+# macOS
+.DS_Store
