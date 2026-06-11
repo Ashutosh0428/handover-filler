@@ -43,6 +43,18 @@ python3 fill_handover.py --template "Shift Handover Template.xlsx" --data data.j
 ```
 Output: `Shift Handover Template.filled.xlsx` — the original template is untouched.
 
+## Example (see `examples/`)
+A runnable before→after demo:
+- `examples/sample_template.xlsx` — blank template (merged cells, styled headers)
+- `examples/sample_data.json` — extracted data
+- `examples/sample_output.xlsx` — the filled result, formatting intact
+
+```
+python3 fill_handover.py --template examples/sample_template.xlsx \
+                         --data examples/sample_data.json \
+                         --out examples/sample_output.xlsx --write
+```
+
 ## Files
 - `inspect_template.py` — dump cells + merged ranges of the template
 - `extract_pdf.py` — dump PDF text + tables
