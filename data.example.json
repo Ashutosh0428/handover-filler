@@ -1,0 +1,13 @@
+{
+  "unit": "Cloud Infra",
+  "project_name": "Project Atlas",
+  "delivery_lead": "R. Mehta",
+  "incidents_raised": 12,
+  "incidents_resolved": 9,
+  "incidents_open": 3,
+  "aging_5_3": 2,
+  "aging_3_1": 1,
+  "aging_gt5": 0,
+  "ongoing_updates": "DB failover tested; patching window scheduled",
+  "open_tasks": "Renew TLS cert; close CR-4471"
+}

@@ -1,0 +1,28 @@
+You are a data-extraction step. Read the attached Infrastructure / Shift
+Handover PDF and output ONLY a single JSON object — no prose, no markdown, no
+code fences, no explanation. If a value is not present in the PDF, use null.
+
+Output EXACTLY these keys (numbers as integers, text as strings):
+
+{
+  "unit": "",
+  "project_name": "",
+  "delivery_lead": "",
+  "incidents_raised": 0,
+  "incidents_resolved": 0,
+  "incidents_open": 0,
+  "aging_5_3": 0,
+  "aging_3_1": 0,
+  "aging_gt5": 0,
+  "ongoing_updates": "",
+  "open_tasks": ""
+}
+
+Rules:
+- Output valid JSON only. Nothing before '{' or after '}'.
+- Do NOT invent values. Missing -> null.
+- Counts must be plain integers (no quotes, no commas, no "incidents").
+- Keep multi-line comments as a single string with "; " between items.
+
+(Add/rename keys here to match FIELD_MAP in fill_handover.py — the keys on both
+sides MUST be identical.)

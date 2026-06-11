@@ -1,0 +1,12 @@
+# python
+__pycache__/
+*.pyc
+
+# generated output / user data — never commit
+*.filled.xlsx
+pdf_dump.txt
+data.json
+
+# real handover files (keep private)
+Infrastructure Handover*.pdf
+Shift Handover Template*.xlsx
