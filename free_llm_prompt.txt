@@ -1,0 +1,64 @@
+============================================================
+NO-CODE PROMPT — works on any free LLM (ChatGPT, Gemini,
+Claude.ai, DeepSeek, etc.). The LLM does NOT make an Excel
+file. It returns a clean value table. You then type/paste
+each value into your existing Shift Handover template by
+hand — so the template's formatting is never touched.
+============================================================
+
+You are a precise data-extraction assistant. I will give you an
+Infrastructure / Shift Handover document. Extract the values and return
+them in a copy-ready table so I can fill an Excel handover sheet by hand.
+
+OUTPUT FORMAT — return ONLY this two-column table, nothing else
+(no intro, no notes, no Excel file, no code):
+
+| Field | Value |
+|-------|-------|
+| Unit |  |
+| Project Name |  |
+| Delivery Lead |  |
+| No of Incidents Raised |  |
+| No of Incidents Resolved |  |
+| No of Incidents Open |  |
+| No of Incidents (5-3) |  |
+| No of Incidents (3-1) |  |
+| No of Incidents (>5) |  |
+| Ongoing Updates |  |
+| Open Tasks / Follow-ups |  |
+
+RULES:
+- Use EXACTLY the field names above, in that order. Do not add or rename rows.
+- One value per row. If a value is NOT in the document, put "—". Never guess.
+- Counts must be plain integers (no words, no commas, no "incidents").
+- For "Ongoing Updates" and "Open Tasks": one short line; separate multiple
+  points with "; ".
+- Output ONLY the table. Nothing before the first "|" or after the last "|".
+
+Here is the document:
+<<< paste the PDF text here, OR attach the PDF if the tool allows file upload >>>
+
+------------------------------------------------------------
+HOW TO USE THE OUTPUT
+------------------------------------------------------------
+1. Open your real "Shift Handover Template.xlsx".
+2. For each table row, click the matching cell in the template and type/paste
+   the Value. (You are editing the existing styled cells — formatting stays.)
+3. Save. Done.
+
+NOTE: replace the field list above with the EXACT labels from your template if
+they differ (open the template and copy the wording). The left column must
+match your sheet's labels so you know where each value goes.
+
+------------------------------------------------------------
+BONUS — if the free tool can RUN code (ChatGPT "data analysis" /
+Google AI Studio / Claude with file upload):
+------------------------------------------------------------
+Upload BOTH the PDF and the blank template, then say:
+
+"Read the handover PDF. Open the attached Shift Handover Template.xlsx with
+openpyxl (do NOT rebuild it). Write the extracted values into the matching
+cells only, preserving all formatting and merged cells, and give me back the
+saved file. Use label-anchored writing: find the cell containing each label,
+then write the value in the cell directly below (for the incident-count
+headers) or directly to the right (for Unit / Project Name / Delivery Lead)."
